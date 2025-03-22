@@ -1,0 +1,225 @@
+/* Fixed Header */
+header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 60px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Left Section: Hamburger Icon & YouTube Logo */
+#left-section {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  margin-right: 80px;
+}
+
+#hamburg-icon {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin: 0 25px 0 17px;
+  border: none;
+  background-color: white;
+}
+
+#hamburg-icon img {
+  height: 30px;
+  width: 20px;
+}
+
+#youtube-logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+}
+
+#youtube-logo img {
+  height: 40px;
+}
+
+#youtube-logo p {
+  font-size: 21px;
+  font-weight: bold;
+  letter-spacing: -1px;
+}
+
+#youtube-logo span {
+  font-weight: 300;
+  font-size: 11px;
+  margin-bottom: 17px;
+  margin-left: 2px;
+}
+
+/* Middle Section: Search & Voice Search */
+#middle-section {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+}
+
+#search-field {
+  width: 100%;
+  max-width: 600px;
+  height: 40px;
+  border: 1px solid rgb(140, 140, 140);
+  border-radius: 20px 0 0 20px;
+  padding-left: 16px;
+  font-size: 16px;
+  box-shadow: inset 1px 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+#search-button,
+#search-voice-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  width: 42px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgb(240, 240, 240);
+  border: none;
+  margin-left: 10px;
+}
+
+#search-button {
+  width: 56px;
+  height: 42px;
+  border-radius: 0 20px 20px 0;
+  margin-left: -1px;
+  background-color: rgb(242, 242, 242);
+  border: 1px solid rgb(140, 140, 140);
+}
+
+#search-button img,
+#search-voice-button img {
+  width: 24px;
+}
+
+/* Right Section: Create, Notifications, Account */
+#right-section {
+  display: flex;
+  align-items: center;
+}
+
+#plus-icon{
+  font-size: 30px;
+  font-weight: 200;
+  margin-right: 5px;
+  margin-bottom: 2px;
+}
+
+#create-button {
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 20px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 15px;
+  margin-right: 10px;
+}
+
+#notifications-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: white;
+  border: none;
+  margin-right: 18px;
+}
+
+#notifications-button img {
+  width: 24px;
+}
+
+#account-link img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+  margin-right: 30px;
+}
+
+/* Tooltip Styling */
+.tooltip {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.65);
+  color: white;
+  padding: 6px;
+  font-size: 12px;
+  top: 53px;
+  opacity: 0;
+  white-space: nowrap;
+  transition: opacity 0.2s;
+  pointer-events: none;
+  border-radius: 4px;
+  border: 1px solid black;
+}
+
+#search-button:hover .tooltip,
+#search-voice-button:hover .tooltip,
+#notifications-button:hover .tooltip {
+  opacity: 1;
+}
+
+/* Hover Effects */
+#hamburg-icon:hover,
+#search-button:hover,
+#create-button:hover,
+#search-voice-button:hover,
+#notifications-button:hover {
+  background-color: rgb(230, 230, 230);
+  cursor: pointer;
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width:700px) {
+  #search-field {
+    display: none;
+  }
+
+  #search-button,
+  #search-voice-button {
+    background-color: white;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border:none;
+  }
+
+  #search-button img,
+  #search-voice-button img {
+    width: 30px;
+  }
+
+  #left-section {
+    margin-right: 10px;
+  }
+
+  #hamburg-icon {
+    margin: 10px 0;
+  }
+
+  #right-section {
+    justify-content: space-between;
+    margin: 0;
+  }
+}
